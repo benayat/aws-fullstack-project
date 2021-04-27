@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #333;
+  --text-color-bright: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+.bg-dark {
+  background-color: var(--primary-color);
+}
+
+.text-white {
+  color: var(--text-color-bright);
+}
