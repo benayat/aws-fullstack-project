@@ -1,0 +1,33 @@
+.header {
+  width: 100vw;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items-wrapper {
+  text-align: center;
+  width: 33%;
+}
+
+.items-wrapper > ul {
+  list-style: none;
+}
+
+.items-wrapper > ul > .item {
+  padding: 1em;
+  display: inline;
+  cursor: pointer;
+}
+
+.logo {
+  display: inline-block;
+  padding: 1em;
+  width: 33%;
+  cursor: pointer;
+}
