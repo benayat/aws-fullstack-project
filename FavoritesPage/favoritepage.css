@@ -1,7 +1,31 @@
-.filter{
-    display:  flex;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url("../FavoritesPage/pexels-aleksandar-pasaric-1415734.jpg") center center/cover;
+}
+.favorite__page__container h1{
+    background: #333;
+    color: white;
+    padding: 25px;
+    text-align: center;
 }
 
-input, select{
+.filter{
+    display:  flex;
+    margin-top: 10px;
+}
+
+.filter > div{
     outline: 0;
+    padding: 10;
+}
+
+.card_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

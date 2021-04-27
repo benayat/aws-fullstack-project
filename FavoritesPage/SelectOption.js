@@ -11,9 +11,8 @@ const SelectOption = ({handleChange}) => {
 
     return (
             <div className="by__calories">
-                <label>Sort Recipes By: </label>
+                <label>Filter Recipes By: </label>
                 <select name="favorite" id="favorite" value={option} onChange={handleOptionChange}>
-                    <option value="all">All</option>
                     <option value="calories">Calories</option>
                     <option value="time">Time</option>
                 </select>
