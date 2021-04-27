@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+
 (async () => {
   let recipeURL = "https://www.iamcook.ru/showrecipe/814";
   const browser = await puppeteer.launch();
@@ -10,9 +11,7 @@ const puppeteer = require("puppeteer");
       .textContent;
     let ingredients = Array.from(
       document.querySelectorAll("p[itemprop='recipeIngredient'  ]")
-    )
-      .map((elem) => elem.innerText)
-      .join("\n");
+    ).map((elem) => elem.innerText);
 
     console.log(ingredients);
     const time = document.querySelector(
@@ -25,21 +24,10 @@ const puppeteer = require("puppeteer");
       document.querySelectorAll("#recbody > div.instructions > div > p")
     )
       .filter((elem, index) => index % 3 === 0)
-      .map((elem) => elem.innerText)
-      .join("\n");
+      .map((elem) => elem.innerText);
     const picture = document.querySelector(
       "#recbody > div.resulphotoandsnaps > figure > img"
-    );
-    // function getBase64Image(img) {
-    //   var canvas = document.createElement("canvas");
-    //   canvas.width = img.width;
-    //   canvas.height = img.height;
-    //   var ctx = canvas.getContext("2d");
-    //   ctx.drawImage(img, 0, 0);
-    //   var dataURL = canvas.toDataURL("image/png");
-    //   return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-    // }
-    console.log(picture);
+    ).baseURI;
 
     return {
       title,
@@ -49,9 +37,8 @@ const puppeteer = require("puppeteer");
       calories,
       howToMake,
       picture,
-      //   base64,
     };
   });
 
-  console.log(data);
+  console.log(JSON.stringify(data));
 })();
