@@ -19,9 +19,12 @@
   list-style: none;
 }
 
-.items-wrapper > ul > .item {
+.items-wrapper > ul > li {
   padding: 1em;
   display: inline;
+}
+
+.items-wrapper > ul > .item > label {
   cursor: pointer;
 }
 

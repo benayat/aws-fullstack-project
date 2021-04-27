@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className="header bg-dark text-white">
       <div className="header-container">
-        <div className="logo"><Link to="/"></Link>
+        <div className="logo"><Link to=""></Link>
           <h2>Logo</h2>
         </div>
         <div className="items-wrapper">
